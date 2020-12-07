@@ -20,10 +20,13 @@ int check_cycle(listint_t *list)
 	short_legs = list;
 	long_legs = list;
 
-	while (long_legs->next->next != NULL)
+	while (long_legs->next != NULL)
 	{
 		short_legs = short_legs->next;
-		long_legs = long_legs->next->next;
+		long_legs = long_legs->next;
+		if (long_legs->next == NULL)
+			break;
+		long_legs = long_legs->next;
 		if (short_legs == long_legs)
 			return (1);
 	}
