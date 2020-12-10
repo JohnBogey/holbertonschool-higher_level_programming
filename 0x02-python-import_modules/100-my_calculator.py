@@ -8,11 +8,11 @@ if __name__ == "__main__":
         exit(1)
     if argv[2] == "+":
         result = add(int(argv[1]), int(argv[3]))
-    elif argv[2] == "+":
+    elif argv[2] == "-":
         result = sub(int(argv[1]), int(argv[3]))
-    elif argv[2] == "+":
+    elif argv[2] == "*":
         result = mul(int(argv[1]), int(argv[3]))
-    elif argv[2] == "+":
+    elif argv[2] == "/":
         result = div(int(argv[1]), int(argv[3]))
     else:
         print("Unknown operator. available operators: +, -, *, and /")
