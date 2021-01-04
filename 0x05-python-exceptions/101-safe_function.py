@@ -3,12 +3,11 @@ def safe_function(fct, *args):
     import sys
 
     try:
-        result = fct(args[0], args[1])
-        return result
-    #except (TypeError, ValueError):
-    #    print("Exception: wrong type", file=sys.stderr)
+        return (args[0], args[1])
     except IndexError:
         print("Exception: list index out of range", file=sys.stderr)
     except ZeroDivisionError:
         print("Exception: division by zero", file=sys.stderr)
+    else:
+        pass
     return None
