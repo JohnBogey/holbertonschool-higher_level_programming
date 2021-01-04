@@ -5,8 +5,8 @@ def safe_function(fct, *args):
     try:
         result = fct(args[0], args[1])
         return result
-    except (TypeError, ValueError):
-        print("Exception: wrong type", file=sys.stderr)
+    #except (TypeError, ValueError):
+    #    print("Exception: wrong type", file=sys.stderr)
     except IndexError:
         print("Exception: list index out of range", file=sys.stderr)
     except ZeroDivisionError:
