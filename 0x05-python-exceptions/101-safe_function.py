@@ -9,5 +9,5 @@ def safe_function(fct, *args):
     except ZeroDivisionError:
         print("Exception: division by zero", file=sys.stderr)
     else:
-        pass
+        return None
     return None
