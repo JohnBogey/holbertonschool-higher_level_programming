@@ -58,7 +58,7 @@ class Square:
                 for j in range(self.__size):
                     print("#", end="")
                 print("")
-    
+
     def __str__(self):
         '''prints square, for usage with print()'''
         square_string = ""
