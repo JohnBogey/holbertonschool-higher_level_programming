@@ -1,0 +1,54 @@
+===============================
+ 5-text_indentation tests
+===============================
+
+This file includes several tests for the file 5-text_indentation.py
+``text_indentation`` prints a square of [size]
+
+===============================
+Tests for normal int size
+
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Simple.Test:String?")
+    Simple.
+    <BLANKLINE>
+    Test:
+    <BLANKLINE>
+    String?
+    <BLANKLINE>
+    >>> text_indentation("Et tu, Brute????")
+    Et tu, Brute?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    >>> string = "test:string?"
+    >>> text_indentation(string)
+    test:
+    <BLANKLINE>
+    string?
+    <BLANKLINE>
+    >>> print(string)
+    test:string?
+    >>> text_indentation("Sentence: Word? Answers. Questions:")
+    Sentence:
+    <BLANKLINE>
+    Word?
+    <BLANKLINE>
+    Answers.
+    <BLANKLINE>
+    Questions:
+    <BLANKLINE>
+
+Tests for bad inputs
+
+::
+
+    >>> text_indentation(42)
+    Traceback (most recent call last):
+    TypeError: text must be a string

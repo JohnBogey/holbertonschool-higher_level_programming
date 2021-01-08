@@ -1,0 +1,50 @@
+===============================
+ 0-add_integer tests
+===============================
+
+This file includes several tests for the file 0-add_integer.py
+``add_integer`` returns the sum of two integers or floats passed into it.
+
+===============================
+Tests for adding normal ints and floats
+
+::
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(1,1)
+    2
+    >>> add_integer(2,4)
+    6
+    >>> add_integer(-1,-2)
+    -3
+    >>> add_integer(1)
+    99
+
+Testing floating-point values.
+
+::
+
+    >>> add_integer(2.0, 3)
+    5
+    >>> add_integer(9.1, 4.6)
+    13
+
+Testing weird inputs.
+
+::
+
+    >>> add_integer("apple", "bannana")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    >>> add_integer(None, None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    >>> add_integer("apple", 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    >>> add_integer(3, "banana")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+    >>> add_integer([3, 4], 5)
+    Traceback (most recent call last):
+    TypeError: a must be an integer

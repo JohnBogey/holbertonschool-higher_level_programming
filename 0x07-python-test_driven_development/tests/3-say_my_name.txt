@@ -1,0 +1,35 @@
+===============================
+ 3-say_my_name tests
+===============================
+
+This file includes several tests for the file 3-say_my_name.py
+``say_my_name`` prints "My name is <first name> <last name>"
+Last name is not required
+
+===============================
+Tests for normal input
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Bob", "Furtburn")
+    My name is Bob Furtburn
+    >>> say_my_name("Jack")
+    My name is Jack 
+    >>> first = "Steve"
+    >>> last = "Dial"
+    >>> say_my_name(first, last)
+    My name is Steve Dial
+
+Tests for bad inputs
+
+::
+
+    >>> say_my_name("")
+    My name is  
+    >>> say_my_name(3.14, "Canyon")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+    >>> say_my_name("Name", ["a", "b", "c"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
