@@ -10,8 +10,8 @@ class Rectangle:
     """Class that defines a rectangle"""
     def __init__(self, width=0, height=0):
         '''sets width, height'''
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
         type(self).number_of_instances += 1
 
     @property
