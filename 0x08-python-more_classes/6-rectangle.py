@@ -11,7 +11,7 @@ class Rectangle:
         '''sets width, height'''
         self.__width = width
         self.__height = height
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -57,15 +57,14 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return rect_string
         for i in range(self.__height):
-            rect_string += "#" * self.__width
-            if i < self.__height - 1:
-                rect_string += "\n"
-        return rect_string
+            rect_string += str(self.print_symbol) * self.__width + "\n"
+        return rect_string[:-1]
 
     def __repr__(self):
         '''returns syntax for creation of this rectangle'''
         return 'Rectangle({}, {})'.format(self.__width, self.__height)
 
     def __del__(self):
+        '''prints message when rectangle is deleted'''
         print("Bye rectangle...")
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
