@@ -48,6 +48,3 @@ Testing weird inputs.
     >>> add_integer([3, 4], 5)
     Traceback (most recent call last):
     TypeError: a must be an integer
-    >>> add_integer()
-    Traceback (most recent call last):
-    TypeError: add_integer() missing 1 required positional argument: 'a'
