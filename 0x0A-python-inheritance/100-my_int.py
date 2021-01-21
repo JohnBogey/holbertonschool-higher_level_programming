@@ -5,7 +5,6 @@
 class MyInt(int):
     """my int"""
 
-
     def __init__(self, val):
         """inits vals"""
         self.__val = int(val)
