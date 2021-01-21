@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """pascal's triangle"""
 
+
 def pascal_triangle(n):
     """returns list of ints"""
     if n <= 0:
