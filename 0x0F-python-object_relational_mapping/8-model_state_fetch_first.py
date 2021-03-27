@@ -19,5 +19,5 @@ if __name__ == "__main__":
         first = session.query(State).order_by(State.id).first()
         print("{}: {}".format(first.id, first.name))
     except:
-        print()
+        print("Nothing")
     session.close()
