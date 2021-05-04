@@ -9,10 +9,10 @@ request(url, function (error, response, body) {
   if (error) {
     console.error(error); // Print the error if one occurred
   } else {
-    fs.writeFile(process.argv[3],body, err => {
+    fs.writeFile(process.argv[3], body, err => {
       if (err) {
         console.error(err);
       }
     });
-   }
+  }
 });
