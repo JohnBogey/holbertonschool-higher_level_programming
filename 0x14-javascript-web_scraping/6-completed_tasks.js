@@ -13,7 +13,7 @@ request(url, function (error, response, body) {
       if (task.completed === true) {
         if (!users[task.userId]) {
           users[task.userId] = 0;
-      }
+        }
         users[task.userId] += 1;
       }
     }
