@@ -10,10 +10,10 @@ request(url, function (error, response, body) {
     const users = {};
     const tasks = JSON.parse(body);
     for (const task of tasks) {
-      if (!users[task.userId]) {
-        users[task.userId] = 0;
-      }
       if (task.completed === true) {
+        if (!users[task.userId]) {
+          users[task.userId] = 0;
+      }
         users[task.userId] += 1;
       }
     }
