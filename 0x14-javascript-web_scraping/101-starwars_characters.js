@@ -8,7 +8,7 @@ request(url, async function (error, response, body) {
     console.error(error); // Print the error if one occurred
   } else {
     for (const person of JSON.parse(body).characters) {
-      await new Promise( function (resolve, reject) {
+      await new Promise(function (resolve, reject) {
         request(person, function (error2, response2, body2) {
           if (error2) {
             console.error(error2); // Print the error if one occurred
